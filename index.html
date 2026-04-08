@@ -6,7 +6,7 @@
   <title>Touchdown Labs — Infrastructure, Education, and Applied Systems for the AI-Native Economy</title>
   <meta
     name="description"
-    content="Touchdown Labs focuses on inference optimization, self-hosting, technical education, research, and services. We help teams improve inference performance, make better deployment decisions, and navigate the infrastructure behind real AI systems."
+    content="Touchdown Labs builds the infrastructure, education, and applied systems behind the AI-native economy — inference benchmarks, kernel and KV-cache work, operator courses, and applied research for teams running modern AI at scale."
   />
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link
@@ -38,279 +38,168 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    section[id] {
-      scroll-margin-top: 90px;
-    }
+    section[id] { scroll-margin-top: 90px; }
 
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--gray-200);
     }
 
     .nav-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 1400px; margin: 0 auto; padding: 0 3rem;
+      display: flex; align-items: center; justify-content: space-between;
       height: 60px;
     }
 
     .nav-logo {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--black);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: -0.3px;
+      font-weight: 700; font-size: 1.05rem; color: var(--black);
+      text-decoration: none; display: flex; align-items: center;
+      gap: 10px; letter-spacing: -0.3px;
     }
 
-    .nav-mark {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .nav-mark span {
-      display: block;
-      height: 2.5px;
-      border-radius: 1px;
-      background: var(--black);
-    }
-
+    .nav-mark { display: flex; flex-direction: column; gap: 3px; }
+    .nav-mark span { display: block; height: 2.5px; border-radius: 1px; background: var(--black); }
     .nav-mark span:nth-child(1) { width: 18px; }
     .nav-mark span:nth-child(2) { width: 13px; opacity: 0.5; }
     .nav-mark span:nth-child(3) { width: 8px; background: var(--accent); opacity: 0.7; }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; }
     .nav-links a {
-      text-decoration: none;
-      color: var(--gray-500);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      letter-spacing: -0.2px;
+      text-decoration: none; color: var(--gray-500);
+      font-size: 0.85rem; font-weight: 500;
+      transition: color 0.2s; letter-spacing: -0.2px;
     }
-
     .nav-links a:hover { color: var(--black); }
 
     .nav-cta {
       color: var(--black) !important;
       border: 1.5px solid var(--black);
-      padding: 6px 18px;
-      font-weight: 600 !important;
+      padding: 6px 18px; font-weight: 600 !important;
       transition: all 0.2s !important;
     }
-
-    .nav-cta:hover {
-      background: var(--black);
-      color: var(--white) !important;
-    }
+    .nav-cta:hover { background: var(--black); color: var(--white) !important; }
 
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+      min-height: 100vh; display: flex; align-items: center;
       padding: 10rem 3rem 6rem;
-      max-width: 1400px;
-      margin: 0 auto;
+      max-width: 1400px; margin: 0 auto;
     }
 
     .hero-content { max-width: 1100px; }
 
     .hero h1 {
       font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.08;
-      letter-spacing: -3px;
-      color: var(--black);
+      font-weight: 300; line-height: 1.08;
+      letter-spacing: -3px; color: var(--black);
     }
 
-    .hero h1 strong {
-      font-weight: 300;
-      color: var(--gray-400);
-    }
+    .hero h1 strong { font-weight: 300; color: var(--gray-400); }
 
     .hero-sub {
-      margin-top: 3rem;
-      font-size: 1.15rem;
-      color: var(--gray-600);
-      max-width: 760px;
-      line-height: 1.8;
-      font-weight: 400;
+      margin-top: 3rem; font-size: 1.15rem;
+      color: var(--gray-600); max-width: 760px;
+      line-height: 1.8; font-weight: 400;
     }
 
     .hero-links {
-      margin-top: 3rem;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      flex-wrap: wrap;
+      margin-top: 3rem; display: flex; gap: 1.5rem;
+      align-items: center; flex-wrap: wrap;
     }
 
     .hero-link {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--black);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--black); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
       transition: gap 0.2s;
     }
-
     .hero-link:hover { gap: 10px; }
-
     .hero-link .arrow { font-size: 1.1rem; }
 
-    section {
-      padding: 8rem 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .full-width {
-      max-width: none;
-      padding-left: 0;
-      padding-right: 0;
-    }
+    section { padding: 8rem 3rem; max-width: 1400px; margin: 0 auto; }
+    .full-width { max-width: none; padding-left: 0; padding-right: 0; }
 
     .section-number {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--gray-400);
-      margin-bottom: 2rem;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--gray-400); margin-bottom: 2rem;
     }
 
     .section-heading {
       font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -2px;
-      max-width: 900px;
+      font-weight: 300; line-height: 1.1;
+      letter-spacing: -2px; max-width: 900px;
     }
 
     .section-desc {
-      margin-top: 2rem;
-      font-size: 1.05rem;
-      color: var(--gray-600);
-      max-width: 760px;
-      line-height: 1.8;
+      margin-top: 2rem; font-size: 1.05rem;
+      color: var(--gray-600); max-width: 760px; line-height: 1.8;
     }
 
-    .divider {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 3rem;
-    }
-
-    .divider hr {
-      border: none;
-      border-top: 1px solid var(--gray-200);
-    }
+    .divider { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+    .divider hr { border: none; border-top: 1px solid var(--gray-200); }
 
     .item-list { margin-top: 5rem; }
 
     .list-item {
       padding: 4rem 0;
       border-bottom: 1px solid var(--gray-200);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: start;
-      gap: 4rem;
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: start; gap: 4rem;
     }
-
     .list-item:first-child { border-top: 1px solid var(--gray-200); }
 
     .item-name {
       font-size: clamp(1.8rem, 3.5vw, 3rem);
-      font-weight: 300;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
+      font-weight: 300; letter-spacing: -1.5px; line-height: 1.1;
     }
 
     .item-desc {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      color: var(--gray-600);
-      max-width: 760px;
-      line-height: 1.8;
+      margin-top: 1rem; font-size: 0.95rem;
+      color: var(--gray-600); max-width: 760px; line-height: 1.8;
+    }
+
+    .item-sub {
+      margin-top: 1.25rem; font-size: 0.82rem;
+      color: var(--gray-400); letter-spacing: 0.5px;
+      text-transform: uppercase; font-weight: 600;
     }
 
     .item-number {
-      font-size: 0.85rem;
-      color: var(--gray-400);
-      font-weight: 400;
-      padding-top: 0.5rem;
+      font-size: 0.85rem; color: var(--gray-400);
+      font-weight: 400; padding-top: 0.5rem;
     }
 
     .item-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--black);
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 1.5rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--black); text-decoration: none;
       transition: gap 0.2s;
     }
-
     .item-link:hover { gap: 10px; }
 
     .grid-3 {
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+      margin-top: 4rem; display: grid;
+      grid-template-columns: repeat(3, 1fr); gap: 0;
     }
 
     .grid-cell {
-      padding: 3rem 2.5rem;
-      border: 1px solid var(--gray-200);
-      margin-top: -1px;
-      margin-left: -1px;
+      padding: 3rem 2.5rem; border: 1px solid var(--gray-200);
+      margin-top: -1px; margin-left: -1px;
     }
 
     .grid-cell h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.75rem;
+      font-size: 1.1rem; font-weight: 700;
+      letter-spacing: -0.3px; margin-bottom: 0.75rem;
     }
 
-    .grid-cell p {
-      font-size: 0.88rem;
-      color: var(--gray-600);
-      line-height: 1.7;
-    }
+    .grid-cell p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; }
 
     .dark-section {
-      background: var(--black);
-      color: var(--white);
-      max-width: none;
-      padding: 8rem 3rem;
+      background: var(--black); color: var(--white);
+      max-width: none; padding: 8rem 3rem;
     }
-
-    .dark-section .inner {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
+    .dark-section .inner { max-width: 1400px; margin: 0 auto; }
     .dark-section .section-heading { color: var(--white); }
     .dark-section .section-desc { color: rgba(255,255,255,0.58); }
     .dark-section .section-number { color: rgba(255,255,255,0.3); }
@@ -318,161 +207,88 @@
     .timeline { margin-top: 5rem; }
 
     .timeline-item {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 2rem;
-      padding: 2rem 0;
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 2rem; padding: 2rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .timeline-num {
-      font-size: 2.5rem;
-      font-weight: 200;
-      color: rgba(255,255,255,0.2);
-      letter-spacing: -1px;
+      font-size: 2.5rem; font-weight: 200;
+      color: rgba(255,255,255,0.2); letter-spacing: -1px;
     }
 
-    .timeline-item h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
+    .timeline-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
 
     .timeline-item p {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.48);
-      line-height: 1.7;
-      max-width: 760px;
+      font-size: 0.88rem; color: rgba(255,255,255,0.48);
+      line-height: 1.7; max-width: 760px;
     }
 
     .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-top: 4rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-top: 4rem;
     }
 
-    .about-text {
-      font-size: 1.1rem;
-      color: var(--gray-600);
-      line-height: 1.8;
-    }
-
+    .about-text { font-size: 1.1rem; color: var(--gray-600); line-height: 1.8; }
     .about-text p { margin-bottom: 1.5rem; }
 
     .cta-section {
-      text-align: center;
-      padding: 10rem 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
+      text-align: center; padding: 10rem 3rem;
+      max-width: 1400px; margin: 0 auto;
     }
 
     .cta-section h2 {
       font-size: clamp(2rem, 5vw, 4rem);
-      font-weight: 300;
-      letter-spacing: -2px;
-      line-height: 1.1;
+      font-weight: 300; letter-spacing: -2px; line-height: 1.1;
     }
 
-    .cta-section h2 strong {
-      font-weight: 300;
-      color: var(--gray-400);
-    }
+    .cta-section h2 strong { font-weight: 300; color: var(--gray-400); }
 
     .cta-links {
-      margin-top: 3rem;
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
+      margin-top: 3rem; display: flex; gap: 2rem;
+      justify-content: center; flex-wrap: wrap;
     }
 
     .cta-link {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--black);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 12px 28px;
-      border: 1.5px solid var(--black);
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--black); text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      padding: 12px 28px; border: 1.5px solid var(--black);
       transition: all 0.2s;
     }
 
-    .cta-link:hover {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .cta-link-primary {
-      background: var(--black);
-      color: var(--white);
-    }
-
+    .cta-link:hover { background: var(--black); color: var(--white); }
+    .cta-link-primary { background: var(--black); color: var(--white); }
     .cta-link-primary:hover { background: var(--gray-800); }
 
     footer {
       border-top: 1px solid var(--gray-200);
-      padding: 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding: 3rem; max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
     }
 
-    footer .foot-left {
-      font-size: 0.82rem;
-      color: var(--gray-500);
-      font-weight: 500;
-    }
-
-    footer .foot-right {
-      display: flex;
-      gap: 2rem;
-    }
+    footer .foot-left { font-size: 0.82rem; color: var(--gray-500); font-weight: 500; }
+    footer .foot-right { display: flex; gap: 2rem; }
 
     footer a {
-      font-size: 0.82rem;
-      color: var(--gray-500);
-      text-decoration: none;
-      font-weight: 500;
+      font-size: 0.82rem; color: var(--gray-500);
+      text-decoration: none; font-weight: 500;
       transition: color 0.2s;
     }
-
     footer a:hover { color: var(--black); }
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
-      .nav-inner,
-      section,
-      .divider,
-      .cta-section,
-      footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+      .nav-inner, section, .divider, .cta-section, footer {
+        padding-left: 1.5rem; padding-right: 1.5rem;
       }
       .hero { padding-top: 8rem; }
-      .list-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
+      .list-item { grid-template-columns: 1fr; gap: 0.5rem; }
       .grid-3 { grid-template-columns: 1fr; }
-      .timeline-item {
-        grid-template-columns: 50px 1fr;
-        gap: 1rem;
-      }
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .timeline-item { grid-template-columns: 50px 1fr; gap: 1rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      footer { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -486,9 +302,8 @@
         Touchdown Labs
       </a>
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#research">Research</a>
-        <a href="#learn">Learn</a>
+        <a href="#work">What We Do</a>
+        <a href="#direction">Direction</a>
         <a href="#about">About</a>
         <a href="https://github.com/OCWC22" class="nav-cta">GitHub</a>
       </div>
@@ -497,15 +312,15 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Inference optimization and <strong>self-hosting for modern AI systems.</strong></h1>
+      <h1>Infrastructure, education, and applied systems for the <strong>AI-native economy.</strong></h1>
       <p class="hero-sub">
-        Touchdown Labs focuses on inference optimization, self-hosting, technical education, research, and services.
-        We help teams improve inference performance, make better deployment decisions, and navigate the infrastructure
-        behind real AI systems.
+        Touchdown Labs builds the tools, benchmarks, and training behind real AI systems — from inference optimization
+        and kernel work to operator courses and applied research. We help teams run modern AI the way it will actually
+        be run: on their own infrastructure, at production scale, with measurable results.
       </p>
       <div class="hero-links">
-        <a href="#work" class="hero-link">Our work <span class="arrow">→</span></a>
-        <a href="#learn" class="hero-link" style="color: var(--gray-500);">Learn with us <span class="arrow">→</span></a>
+        <a href="#work" class="hero-link">What we do <span class="arrow">→</span></a>
+        <a href="#direction" class="hero-link" style="color: var(--gray-500);">Our direction <span class="arrow">→</span></a>
         <a href="mailto:william@touchdown-labs.com" class="hero-link" style="color: var(--gray-500);">Talk to us <span class="arrow">→</span></a>
       </div>
     </div>
@@ -517,32 +332,60 @@
     <p class="section-number">/0.1</p>
     <h2 class="section-heading">What We Do</h2>
     <p class="section-desc">
-      We work across inference optimization, self-hosting, education, and applied research. Our public work includes
-      benchmarks, datasets, and tooling that support real operators and contribute useful signal to the broader
-      inference ecosystem.
+      Three lanes, one thesis. The infrastructure work produces the benchmarks and kernels that become the curriculum,
+      the education builds the audience that becomes the pipeline, and the applied engagements feed real workloads
+      back into the infrastructure. Each lane compounds the next.
     </p>
 
-    <div class="grid-3">
-      <div class="grid-cell">
-        <h3>Inference Optimization</h3>
-        <p>
-          Practical work on inference performance, engine configuration, workload behavior, and bottlenecks that matter
-          in real deployments.
-        </p>
+    <div class="item-list">
+      <div class="list-item">
+        <div>
+          <div class="item-name">AI Infrastructure</div>
+          <p class="item-desc">
+            Open benchmarks, kernel work, and inference performance research on modern hardware. This is where
+            Touchdown-1 lives — our open dataset of realistic agentic workloads designed for vLLM, SGLang, LMCache,
+            and the next generation of inference benchmarks. It is also where we do FP4 KV-cache bring-up work on
+            Hopper and Blackwell, and MFMA kernel work on AMD MI355X.
+          </p>
+          <p class="item-sub">Touchdown-1 · ISB-1 · vLLM / SGLang / LMCache · MI355X · FP4 KV-cache</p>
+          <a href="https://github.com/OCWC22/EasyInference/tree/main/products/isb1" class="item-link">
+            View benchmark work <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="item-number">/0.1.1</div>
       </div>
-      <div class="grid-cell">
-        <h3>Self-Hosting</h3>
-        <p>
-          Support for teams navigating model serving, deployment tradeoffs, and infrastructure decisions behind running
-          AI systems outside closed platforms.
-        </p>
+
+      <div class="list-item">
+        <div>
+          <div class="item-name">Education and Upskilling</div>
+          <p class="item-desc">
+            Technical courses, operator guides, and deep-dive writing for the engineers actually running AI systems
+            in production. We translate benchmark work and kernel research into training people can use — short
+            videos, technical essays, and paid operator cohorts focused on self-hosting, inference tuning, and the
+            real infrastructure behind modern AI.
+          </p>
+          <p class="item-sub">Operator Course · Substack · Video series · Cohort-based learning</p>
+          <a href="mailto:william@touchdown-labs.com" class="item-link">
+            Join the next cohort <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="item-number">/0.1.2</div>
       </div>
-      <div class="grid-cell">
-        <h3>Open Work</h3>
-        <p>
-          Benchmarks, datasets, and tooling published to seed the ecosystem, support education, and reflect the
-          practical systems problems we care about most.
-        </p>
+
+      <div class="list-item">
+        <div>
+          <div class="item-name">Applied Research and Systems</div>
+          <p class="item-desc">
+            Private benchmark engagements, inference audits, and applied systems work for neoclouds, model labs, and
+            infrastructure teams. Productized, not consulting — each engagement runs on the same open benchmark
+            methodology we publish, so customers get reproducible results they can share internally and externally.
+          </p>
+          <p class="item-sub">Private benchmarks · Inference audits · Deployment systems · Kernel reviews</p>
+          <a href="mailto:william@touchdown-labs.com" class="item-link">
+            Work with us <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="item-number">/0.1.3</div>
       </div>
     </div>
   </section>
@@ -551,74 +394,55 @@
 
   <section id="research">
     <p class="section-number">/0.2</p>
-    <h2 class="section-heading">Research and Applied Tooling</h2>
+    <h2 class="section-heading">Open Work</h2>
     <p class="section-desc">
-      Our research is grounded in real systems work. We use benchmarks, tooling, and applied analysis to help teams
-      understand inference performance, self-hosting tradeoffs, and the infrastructure behind modern AI systems.
+      Our public work includes the dataset, the benchmark standard, and the tooling we use ourselves. Each of these
+      exists because the inference ecosystem asked for it and nobody had shipped it yet.
     </p>
 
-    <div class="item-list">
-      <div class="list-item">
-        <div>
-          <div class="item-name">Benchmarks</div>
-          <p class="item-desc">
-            Open benchmark work focused on realistic workloads, reproducible measurement, and practical questions around
-            latency, throughput, capacity, and degradation.
-          </p>
-          <a href="https://github.com/OCWC22/EasyInference/tree/main/products/isb1" class="item-link">
-            View benchmark work <span class="arrow">→</span>
-          </a>
-        </div>
-        <div class="item-number">/0.2.1</div>
+    <div class="grid-3">
+      <div class="grid-cell">
+        <h3>Touchdown-1</h3>
+        <p>
+          An open dataset of realistic agentic coding, multi-turn chat, reasoning, and tool-use traces — the workload
+          public inference benchmarks have been explicitly missing. Reproducible scripts for vLLM, SGLang, and
+          LMCache on H100, H200, and B200.
+        </p>
       </div>
-
-      <div class="list-item">
-        <div>
-          <div class="item-name">Datasets and Tooling</div>
-          <p class="item-desc">
-            Open datasets and practical tools that help teams evaluate, inspect, and reason about inference systems in
-            practice.
-          </p>
-          <a href="https://github.com/OCWC22/Inferscope" class="item-link">
-            View research repo <span class="arrow">→</span>
-          </a>
-        </div>
-        <div class="item-number">/0.2.2</div>
+      <div class="grid-cell">
+        <h3>ISB-1</h3>
+        <p>
+          An open benchmark standard for inference measurement. Reproducible, workload-aware, and designed to be
+          cited — built to give operators, neoclouds, and framework maintainers a common language for performance.
+        </p>
       </div>
-
-      <div class="list-item">
-        <div>
-          <div class="item-name">Kernel and Systems Research</div>
-          <p class="item-desc">
-            Focused work on inference-critical paths, custom kernels, engine configuration, and hardware-aware systems
-            research where it materially informs performance and deployment decisions.
-          </p>
-          <a href="https://github.com/OCWC22" class="item-link">
-            View repositories <span class="arrow">→</span>
-          </a>
-        </div>
-        <div class="item-number">/0.2.3</div>
+      <div class="grid-cell">
+        <h3>InferScope</h3>
+        <p>
+          Open tooling for inspecting and diagnosing live inference systems. Used in our own engagements and published
+          for the broader community of operators running production AI infrastructure.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="dark-section full-width">
+  <section id="direction" class="dark-section full-width">
     <div class="inner">
       <p class="section-number">/0.3</p>
       <h2 class="section-heading">Direction</h2>
       <p class="section-desc">
-        We start with inference optimization, self-hosting, education, research, and services. Over time, we want to
-        go deeper into the systems and physical infrastructure behind AI.
+        We start with the open dataset, the benchmark, and the tools operators need today. Over time, each lane
+        deepens into more serious infrastructure — first software, then applied services, then hardware.
       </p>
 
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-num">01</div>
           <div>
-            <h3>Today</h3>
+            <h3>Today — Open benchmarks, kernels, and operator training</h3>
             <p>
-              Inference optimization, self-hosting support, technical education, benchmark work, and applied research
-              for teams running modern AI systems.
+              Touchdown-1 dataset, ISB-1 benchmark standard, FP4 KV-cache bring-up work, AMD MI355X MFMA kernels,
+              and the first operator course. Paid private benchmark engagements for neoclouds and model labs.
             </p>
           </div>
         </div>
@@ -626,10 +450,10 @@
         <div class="timeline-item">
           <div class="timeline-num">02</div>
           <div>
-            <h3>Next</h3>
+            <h3>Next — Production-grade inference systems and managed deployments</h3>
             <p>
-              Deeper infrastructure support, hardware-aware system design, and more advanced applied tooling for real
-              deployments.
+              Deeper applied systems work, managed inference deployments for customers, continuous benchmarking
+              infrastructure, and a larger cohort of operator training anchored on the open dataset and benchmark.
             </p>
           </div>
         </div>
@@ -637,10 +461,11 @@
         <div class="timeline-item">
           <div class="timeline-num">03</div>
           <div>
-            <h3>Long Term</h3>
+            <h3>Long Term — KV-cache accelerator hardware and US silicon</h3>
             <p>
-              Designing and manufacturing silicon in the United States, and helping build the data centers that support
-              it.
+              Designing and manufacturing specialized inference silicon in the United States — starting with
+              KV-cache accelerators informed by years of workload data from our own benchmarks and engagements — and
+              helping build the data centers that support them.
             </p>
           </div>
         </div>
@@ -648,72 +473,42 @@
     </div>
   </section>
 
-  <section id="learn">
-    <p class="section-number">/0.4</p>
-    <h2 class="section-heading">Education and Services</h2>
-    <p class="section-desc">
-      We care about making inference and self-hosting more understandable and more practical. That includes technical
-      education, applied guidance, and direct work with teams that need help making better infrastructure decisions.
-    </p>
-
-    <div class="grid-3">
-      <div class="grid-cell">
-        <h3>Education</h3>
-        <p>
-          Technical content, guides, and learning materials focused on inference, self-hosting, deployment tradeoffs,
-          and practical AI infrastructure.
-        </p>
-      </div>
-      <div class="grid-cell">
-        <h3>Applied Research</h3>
-        <p>
-          Research tied to real deployment questions, not toy demos — grounded in systems behavior, workload realism,
-          and measurable performance.
-        </p>
-      </div>
-      <div class="grid-cell">
-        <h3>Services</h3>
-        <p>
-          Support for teams that need help with inference performance, self-hosting decisions, and the infrastructure
-          behind real AI systems.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <div class="divider"><hr /></div>
 
   <section id="about">
-    <p class="section-number">/0.5</p>
+    <p class="section-number">/0.4</p>
     <h2 class="section-heading">About Touchdown Labs</h2>
 
     <div class="about-grid">
       <div class="about-text">
         <p>
-          Touchdown Labs focuses on inference optimization, self-hosting, technical education, research, and services.
-          We work on practical problems around inference performance, deployment decisions, and the infrastructure
-          required to run modern AI systems well.
+          Touchdown Labs builds the infrastructure, education, and applied systems behind the AI-native economy.
+          The same team that ships the open dataset and benchmark also writes the course, runs the private
+          engagements, and does the kernel work. The loop is the product.
         </p>
         <p>
-          Our public work includes open benchmarks, datasets, and tooling that contribute useful signal to the broader
-          ecosystem. Those efforts support operators today while also reflecting the problems we care about most deeply.
+          Our work sits at the intersection of three things the industry needs and rarely gets together:
+          realistic public benchmarks, honest operator training, and applied engineering that actually runs in
+          production — not demos.
         </p>
       </div>
       <div class="about-text">
         <p>
-          We care about making advanced AI systems more understandable, more practical, and easier to operate outside
-          closed platforms.
+          We are currently part of GMI Cloud's SCALE program and running our own operations as a design partner
+          for General Intelligence Company's Cofounder platform. We publish openly, charge for serious work, and
+          teach what we learn along the way.
         </p>
         <p>
-          Long term, we want to go beyond software into designing and manufacturing silicon in the United States and
-          helping build the data centers that support it.
+          Long term, we want to go beyond software into designing and manufacturing specialized inference silicon
+          in the United States and helping build the data centers that support it. The software work is how we
+          earn the right to build the hardware.
         </p>
       </div>
     </div>
   </section>
 
   <section class="cta-section">
-    <h2>Inference optimization, self-hosting, and <strong>real infrastructure work.</strong></h2>
+    <h2>AI infrastructure, operator education, and <strong>applied systems work.</strong></h2>
     <div class="cta-links">
       <a href="https://github.com/OCWC22" class="cta-link cta-link-primary">Open work →</a>
       <a href="https://github.com/OCWC22/Inferscope" class="cta-link">Research →</a>
